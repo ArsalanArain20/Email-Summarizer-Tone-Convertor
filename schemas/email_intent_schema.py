@@ -1,6 +1,8 @@
+# Imports
 from typing import Literal, Optional, List
 from pydantic import BaseModel, Field
 
+# Schema Design Class for Email Intent
 class EmailIntentSchema(BaseModel):
     intent: Literal[
         "complaint", 
@@ -28,6 +30,7 @@ class EmailIntentSchema(BaseModel):
     contains_attachment: Optional[bool] = Field(default=None, description="Whether the email appears to refer to or mention an attachment.")
 
 
+# Schema Design Class for Email Actions
 class EmailActionSchema(BaseModel):
     action_items: Optional[List[str]] = Field(
         default=None,

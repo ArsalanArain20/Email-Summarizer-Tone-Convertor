@@ -1,5 +1,7 @@
+# Imports
 from langchain.prompts import PromptTemplate
 
+# Email Language Detector Prompt
 def get_prompt():
     prompt = PromptTemplate(
             input_variables=["email"],

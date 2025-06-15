@@ -1,6 +1,7 @@
+# Imports
 from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 
-# Generate Prompts
+# Email Summarizer Prompt
 def get_email_summarizer_prompt():
     system_message = SystemMessagePromptTemplate.from_template(
         "You are a helpful and professional assistant specialized in understanding, summarizing, "

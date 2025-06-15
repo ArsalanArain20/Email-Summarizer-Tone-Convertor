@@ -1,14 +1,17 @@
+# Imports 
+import sys
+import os
 from langchain_core.runnables import RunnableParallel
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-import sys
-import os
 # Add the parent directory to sys.path
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
 
+# Import Functions from Schema
 from schemas.email_intent_schema import EmailIntentSchema,EmailActionSchema
 
+# Email Intent Chain
 def EmailIntentChain(email_text: str):
     # Load .env settings
     load_dotenv()

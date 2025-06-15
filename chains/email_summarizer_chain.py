@@ -1,7 +1,9 @@
+# Imports
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
 
+# Email Summarizer Chain
 def email_chain(prompt,emial_content):
     #Logic Building
     model1 = ChatOpenAI(model = 'chatgpt-4o-latest', temperature = 0.3)
