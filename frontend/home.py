@@ -15,3 +15,4 @@ user_input = st.text_area("Paste your email here:", height=300)
 if st.button("Summarize"):
     user_input = Frontend_Email_Summarizer(user_input)
     st.write(user_input)
+
